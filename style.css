@@ -1,0 +1,593 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Poppins:wght@300&family=Rubik&family=Varela+Round&display=swap');
+
+
+
+
+/* START */
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box  ;
+}
+
+body {
+    background-color: hwb(34 89% 1%);
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.logo-var {
+    font-size: 24px;
+    width: 250px;
+    padding: 3px 0 3px 0;
+    margin-bottom: 20px;
+    background-color: #fefefe;
+    border-radius: 35px 0 35px 0;
+    border: 2px solid rgba(0,0,0,0.75);
+    box-shadow: 20px -5px 0px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 20px -5px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px -5px 0px 0px rgba(0,0,0,0.75);
+}
+
+/* NAVBAR START*/
+
+nav {
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    padding: 25px;
+    background-color: hwb(32% 81% 94% / 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #d81f27;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e62129;
+    transition: all .3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+
+}
+
+.logo-kiri, .logo-kanan {
+    font-family: 'Varela Round', sans-serif;
+    padding: 5px;
+    text-align: center;
+    line-height: 25px;
+    width: 250px;
+    height: 30px;
+    border-radius: 0 30px 0 30px;
+    color: white;
+    background-color: #d81f27;
+}
+
+/* NAVBAR END */
+
+/* HOME START */
+
+#home {
+    margin-top: 10rem;
+    text-align: center;
+    padding: 20px;
+    height: 60vh;
+    display: inline-block;
+}
+
+#home .logo-var {
+    font-size: 24px;
+    display: inline-block;
+    width: 400px;
+    background-color: #fefefe;
+    border-radius: 35px 0 35px 0;
+    margin: auto;
+    border: 2px solid rgba(0,0,0,0.75);
+    box-shadow: 20px -5px 0px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 20px -5px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px -5px 0px 0px rgba(0,0,0,0.75);
+}
+
+#home img {
+    position: absolute;
+    top: 10rem;
+    height: 300px;
+    z-index: -9999;
+
+}
+
+#home h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 100px;
+    font-weight: bold;
+    -webkit-text-stroke: 1.5px #f08519;
+    text-shadow: 3px 2px 0px #000000;;
+    color: #e62129;
+}
+
+#home p {
+    font-family: 'Playfair Display SC', serif;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* HOME END */
+
+/* ABOUT START */
+
+#about {
+    margin: 6rem auto;
+    scroll-margin-top: 5rem;
+    padding: 20px;
+    color: #333;
+}
+
+#about .tahun {
+    color: #e62129;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+.nama {
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 1000px;
+}
+
+.nama h1 {
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    color: #e62129;
+}
+
+.nama h2 {
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: light;
+    font-size: 34px;
+    color: #e62129;
+    margin-bottom: 20px;
+}
+
+.nama .p-satu {
+    font-family: 'Varela Round', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.nama .p-satu span {
+    font-weight: bold;
+}
+
+
+.nama .p-dua {
+    font-family: 'Varela Round', sans-serif;
+    text-align: left;
+    font-size: 18px;
+}
+
+.edu-expe {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.education h1, .experience h1 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    color: #e62129;
+}
+
+.education, .experience {
+    width: 500px;
+    padding: 20px;
+}
+
+.education p {
+    text-align: left;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.education p span, .experience p span {
+    font-weight: bold;
+}
+
+.experience p {
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+/* ABOUT END */
+
+/* TECH STACK START */
+
+#tech-stack {
+    position: relative;
+    height: 100vh;
+    padding: 20px;
+}
+
+#tech-stack .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tech-stack .logo-var {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#tech-stack h1 {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #e62129;
+}
+
+#tech-stack h2 {
+    color: #333;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#tech-stack .logo-app {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-app img {
+    height: 70px;
+    border-radius: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: .4s;
+    box-shadow: 0px 0px 15px 0px rgba(91,72,72,0.75);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(91,72,72,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(91,72,72,0.75);
+}
+
+.logo-app img:hover {
+    transform: scale(1.1);
+}
+
+/* TECH STACK END */
+
+/* PORTO START */
+
+#porto {
+    scroll-margin-top: 6rem;
+    margin-top: 6rem;
+    padding: 20px;  
+}
+
+#porto h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #e62129;
+}
+
+#porto p {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#porto .logo-var{
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#porto .porto-title {
+    color: #d81f27;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    width: 300px;
+    margin-top: 70px;
+    padding: 10px 0 10px 0;
+    background-color: #fefefe;
+    border: 2px solid rgb(216, 31, 39);
+    border-radius: 30px;
+    box-shadow: 20px -5px 0px 0px rgb(216,31,39);
+    -webkit-box-shadow: 20px -5px 0px 0px rgb(216,31,69);
+    -moz-box-shadow: 20px -5px 0px 0px rgb(216,31,69);
+}
+
+#porto .feed-img , .menu-img , .esport-img , .kn-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.esport-img img {
+    height: 250px;
+}
+
+#porto .flyer-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.flyer-img img {
+    align-self: center;
+}
+
+.kn-img img {
+    width: 40%;
+    height: 40%;
+}
+
+#porto .web-img {
+    margin-top: 30px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.web-img img {
+    margin: 5px;
+    width: 45%;
+    height: 45%;
+}
+
+/* PORTO END */
+
+
+/* CONTACT START */
+
+#contact {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    scroll-margin-top: 6rem;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Varela Round';
+}
+
+#contact .logo-var {
+    color: #333;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#contact h3 {
+    color: #e62129;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px
+}
+
+#contact h1 {
+    color: #333;
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#contact .form {
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    text-align: start;
+    width: 800px;
+}
+
+#contact .nama, .email{
+    margin-bottom: 20px;
+}
+
+.form  label {
+    color: #e62129;
+    font-weight: bold;
+}
+
+.form input{
+    box-sizing: border-box;
+    margin-top: 10px;
+    width: 800px;
+    height: 40px;
+    background-color: #e6212944;
+    border-radius: 10px;
+    border-width: 0;
+    padding: 10px;
+}
+
+::placeholder {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.form input[type="text"] {
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+.pesan textarea {
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 10px;
+    resize: vertical;
+    width: 800px;
+    box-sizing: border-box;
+    background-color: #e6212944;
+    border-radius: 10px;
+    border-width: 0;
+    padding: 10px;
+}
+
+
+.form button {
+    position: absolute;
+    right: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 30px;
+    color: white;
+    border-width: 0;
+    background-color: #e62129;
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid #e62129;
+}
+
+.form button:hover {
+    color: #e62129;
+    background-color: #f6f6f6;
+    border: 2px solid #e62129;
+}
+
+/* CONTACT END */
+
+
+/* FOOTER START */
+
+footer {
+    font-family: 'Varela Round';
+    width: 100%;
+    background-color: #440c0d;
+    padding: 15px;
+}
+
+.icon-footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon-footer .bi-instagram, .icon-footer .bi-whatsapp, .icon-footer .bi-envelope-plus {
+    font-size: 17px;
+    margin-right: 10px;
+    padding: 5px;
+    border: 2px solid #7a7a7a;
+    border-radius: 30%;
+    background-color: transparent;
+    color: #7a7a7a;
+    cursor: pointer;
+    transition-duration: .1s;
+}
+
+.icon-footer .bi-instagram:hover, .icon-footer .bi-whatsapp:hover, .icon-footer .bi-envelope-plus:hover {
+    color: white;
+    background-color: #e62129;
+    border: 2px solid #e62129;
+}
+
+footer p {
+	color: white;
+	text-align: center;
+	font-size: 16px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #e62129;
+}
+
+/* FOOTER END */
